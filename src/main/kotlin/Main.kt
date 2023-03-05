@@ -9,5 +9,5 @@ fun main(args: Array<String>) {
 
         println()
         print("Masukkan 'Y' untuk mengulang: ")
-    } while (readLine()?.uppercase() ?: "" == "Y")
+    } while (readLine()?.trim()?.uppercase() ?: "" == "Y")
 }

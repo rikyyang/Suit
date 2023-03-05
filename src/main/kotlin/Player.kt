@@ -4,7 +4,7 @@ class Player(val name: String) {
     var choiceIndex = -1
 
     fun choose(choice: String) {
-        choiceIndex = choices.indexOf(choice.uppercase())
+        choiceIndex = choices.indexOf(choice.trim().uppercase())
 
         if (choiceIndex < 0) {
             println("Input yang diterima: batu | kertas | gunting")
