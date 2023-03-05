@@ -1,7 +1,13 @@
 fun main(args: Array<String>) {
-    println("Hello World!")
+    do {
+        val player1 = Player("pemain 1")
+        val player2 = Player("pemain 2")
+        val suit = Suit("GAME SUIT VERSI TERMINAL", player1, player2)
 
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-    println("Program arguments: ${args.joinToString()}")
+        suit.startGame()
+        suit.getResult()
+
+        println()
+        print("Masukkan 'Y' untuk mengulang: ")
+    } while (readLine()?.uppercase() ?: "" == "Y")
 }
